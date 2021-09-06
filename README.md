@@ -1,7 +1,7 @@
 # Registro de Aeronaves | Aircraft Registration 
 
 Uma página criada para encontrar informações de uma aeronave brasileira a partir do seu prefixo.<br>
-A page made to find information about a Brazilian aircraft based on its prefix
+A page created to find information about a Brazilian aircraft based on its prefix.
 
 ## Fonte de dados | Data source 
 
