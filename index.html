@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Registro de Aeronaves</title>
+    <link rel="icon" href="./assets/plane.ico" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Web site created to find information about a Brazilian aircraft" />
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/main.js" defer></script>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="left">
+            <header>
+                <h1>Registro de aeronaves ✈️</h1>
+            </header>
+            <main>
+                <p class="message">Digite o prefixo da aeronave</p>
+                <input type="text" id="registration" name="registration" class="registration" maxlength='5'></input>
+                <button class="btn-search">Buscar</button>
+            </main>
+        </div>
+        <div class="right">
+            <div class="card">
+                <h2 class="prefix"> - </h2>
+
+                <div class="tags">
+                    <div>Fabricante:&nbsp;</div>
+                    <div class="manufacturer"> </div>    
+                </div>
+
+                <div class="tags">
+                    <div>Modelo:&nbsp;</div>
+                    <div class="model"> </div>    
+                </div>
+
+                <div class="tags">
+                    <div>Ano:&nbsp;</div>
+                    <div class="year"> </div>    
+                </div>
+
+                <div class="tags">
+                    <div>Operador:&nbsp;</div>
+                    <div class="operator"> </div>    
+                </div>
+
+                <div class="links">
+                    <a class="rab" target="_blank">RAB</a>
+                    <a class="jetphotos" target="_blank">Jetphotos</a> 
+                </div>                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
