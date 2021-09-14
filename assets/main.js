@@ -5,27 +5,30 @@ axios('https://altinodantas.github.io/checkmark/data/dados.json')
     }
 );
 
-const checkRegistration = (data) => {
+const checkRegistration = (data) => {    
     const btnSearch = document.querySelector(".btn-search");
     const message = document.querySelector(".message");
     const aircraftRegistration = document.getElementById("registration");
-    const prefix = document.querySelector(".prefix");
-    const model = document.querySelector(".model");
-    const year = document.querySelector(".year");
-    const manufacturer = document.querySelector(".manufacturer");
-    const operator = document.querySelector(".operator");
-    const rab = document.querySelector(".rab");
-    const jetphotos = document.querySelector(".jetphotos");
+    const prefix = document.getElementById("prefix");
+    const model = document.getElementById("model");
+    const year = document.getElementById("year");
+    const manufacturer = document.getElementById("manufacturer");
+    const operator = document.getElementById("operator");
+    const rab = document.getElementById("rab");
+    const jetphotos = document.getElementById("jetphotos");
+    const flightradar = document.getElementById("flightradar");
 
     aircraftRegistration.focus();
 
     btnSearch.addEventListener('click', () => {
         searchRegistration();
+        aircraftRegistration.focus();
     });
 
     aircraftRegistration.addEventListener('keypress', (e) => {
         if (e.keyCode === 13) {
             searchRegistration();
+            aircraftRegistration.focus();
     }});
 
     const searchRegistration = () => {
@@ -40,8 +43,9 @@ const checkRegistration = (data) => {
                 aircraftRegistration.value = '';                
 
                 result.map(reg => {
-                    const setLinkJetphotos = `https://www.jetphotos.com/photo/keyword/${formatPrefix(reg.MARCA)}`;
                     const setLinkRab = `https://sistemas.anac.gov.br/aeronaves/cons_rab_resposta.asp?textMarca=${reg.MARCA}`;
+                    const setLinkJetphotos = `https://www.jetphotos.com/photo/keyword/${formatPrefix(reg.MARCA)}`;
+                    const setLinkFlighradar = `https://www.flightradar24.com/data/aircraft/${reg.MARCA.toLowerCase()}`;
 
                     prefix.innerHTML = formatPrefix(reg.MARCA);
                     manufacturer.innerHTML = reg.NMFABRICANTE;
@@ -49,8 +53,10 @@ const checkRegistration = (data) => {
                     year.innerHTML = reg.NRANOFABRICACAO;
                     operator.innerHTML = reg.NMOPERADOR;
 
-                    jetphotos.setAttribute("href", setLinkJetphotos);
                     rab.setAttribute("href", setLinkRab);
+                    jetphotos.setAttribute("href", setLinkJetphotos);
+                    flightradar.setAttribute("href", setLinkFlighradar);
+
                 });               
 
             } else {
