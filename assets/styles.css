@@ -7,10 +7,16 @@ h2 {
   padding: 0;
 }
 
+:root {
+  --primary-color: #222;
+  --secondary-color: #fff;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
 body {
-  background-color: #222;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #fff;
+  background-color: var(--primary-color);
+  font-family: var(--body-font);
+  color: var(--secondary-color);
 }
 
 /* Grid */
@@ -34,18 +40,18 @@ body {
 }
 
 .left {
-  background-color: #222;
+  background-color: var(--primary-color);
 }
 
 .right {
-  background-color: #fff;
+  background-color: var(--secondary-color);
 }
 
 /* Header */
 
 header {
   width: 100%;
-  background-color: #222;
+  background-color:  var(--primary-color);
 }
 
 header h1 {
@@ -70,7 +76,7 @@ main input {
   font-size: 4em;
   border-radius: 5px;
   box-shadow: none;
-  border: 2px solid #fff;
+  border: 2px solid var(--secondary-color);
   transition: all 0.3s ease-in-out;
   padding: 5px 15px;
   background: none;
@@ -111,10 +117,10 @@ main p {
 
 .card {
   width: 50%;
-  background-color: #222;
+  background-color: var(--primary-color);
   border-radius: 10px;
-  border: 5px solid #fff;
-  box-shadow: 0px 0px 5px 5px #222;
+  border: 5px solid var(--secondary-color);
+  box-shadow: 0px 0px 5px 5px var(--primary-color);
   transition: all 0.3s ease-in-out;
   padding: 20px;
 }
@@ -148,7 +154,7 @@ main p {
 
 .links a {
   text-decoration: underline;
-  color: #fff;
+  color: var(--secondary-color);
 }
 
 .links a:hover {
@@ -156,7 +162,7 @@ main p {
 }
 
 .error {
-  color: red;
+  color: rgb(255, 0, 0);
 }
 
 @media (max-width: 800px) {

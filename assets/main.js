@@ -1,7 +1,7 @@
 // axios.get('https://sistemas.anac.gov.br/dadosabertos/Aeronaves/RAB/dados_aeronaves.json')
 axios('https://altinodantas.github.io/checkmark/data/dados.json')
-    .then((response) => {
-        checkRegistration(response.data);
+    .then(response => {
+        checkRegistration(response.data)
     }
 );
 
@@ -20,13 +20,22 @@ const checkRegistration = (data) => {
     aircraftRegistration.focus();
 
     btnSearch.addEventListener('click', () => {
+        searchRegistration();
+    });
+
+    aircraftRegistration.addEventListener('keypress', (e) => {
+        if (e.keyCode === 13) {
+            searchRegistration();
+    }});
+
+    const searchRegistration = () => {
         if (aircraftRegistration.value.length === 5) {
 
             const result = data.filter(registro => registro.MARCA === aircraftRegistration.value.toUpperCase());
 
             if (result.length === 1) {
                 
-                message.innerHTML = 'Digite o prefixo da aeronave';
+                message.innerHTML = 'Digite o registro da aeronave';
                 message.classList.remove("error");
                 aircraftRegistration.value = '';                
 
@@ -49,19 +58,14 @@ const checkRegistration = (data) => {
                 message.classList.add("error");
             }
         } else {
-            message.innerHTML = 'Digite as 5 letras do prefixo. (PR-ABC)';
+            message.innerHTML = 'Digite as 5 letras do registro (PR-ABC).';
             message.classList.add("error");
         }
-    });
+    }
 }
 
 const formatPrefix = (reg) => {
-    const registration = reg.toString();
+    const registration = reg.slice(0, 2) + '-' + reg.slice(2,5).toString();
 
-    const prefix = registration.slice(0, 2);
-    const sufix = registration.slice(2, 5);
-
-    const result = `${prefix}-${sufix}`;
-
-    return result;
+    return registration;
 }
