@@ -1,5 +1,5 @@
 // axios.get('https://sistemas.anac.gov.br/dadosabertos/Aeronaves/RAB/dados_aeronaves.json')
-axios('https://altinodantas.github.io/checkmark/data/dados.json')
+axios('https://aircraft-registration.surge.sh/data/dados.json')
     .then(response => {
         checkRegistration(response.data)
     }
