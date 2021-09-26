@@ -207,14 +207,22 @@ main p {
 /* Footer */
 
 footer {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    background: #00b6ff;
-    float: right;
-    padding: 10px 0px;
-    text-align: center;
-    font-weight: bold;
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  background: transparent;
+  padding: 10px 0px;
+  text-align: center;
+  font-weight: bold;
+  color: #00b6ff;
+  opacity: 0.5;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: serif;
+}
+
+footer span {
+  color: var(--secondary-color);
 }
 
 @media (max-width: 800px) {
@@ -229,6 +237,7 @@ footer {
 
   header h1 {
     font-size: 1.5em;
+    margin-top: 50px;
   }
 
   main input {
@@ -242,8 +251,20 @@ footer {
   }
 
   .card {
-    margin: 20px 0px;
     width: 80%;
     padding: 10px;
+  }
+
+  .tooltip {
+    margin: 10px;
+  }
+
+  footer {
+    width: 100%;
+    padding: 5px 0px;
+  }
+
+  footer span {
+    color: var(--primary-color);
   }
 }
