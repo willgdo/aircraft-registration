@@ -113,6 +113,45 @@ main p {
 	opacity: 0.7;
 }
 
+/* Tooltip*/
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 50px;
+  background: #00b6ff;
+  color: white;
+  padding: 1em;
+  padding-top: 15px;
+  border-radius: 10px;
+  width: 250px;
+  clip-path: circle(10% at 90% 12%);
+  transition: all 0.3s ease-in-out;
+}
+
+.tooltip:hover {
+  clip-path: circle(100%);
+}
+
+.tooltip:hover span {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.icon {
+  float: right;
+  font-weight: bold;
+  margin-right: 5px;
+  margin-top: 2px;
+  transition: opacity 0.3s;
+  font-size: 22px;
+}
+
+.tooltip a {
+  color: var(--secondary-color);
+}
+
 /* Result */
 
 .card {
@@ -163,6 +202,19 @@ main p {
 
 .error {
   color: rgb(255, 0, 0);
+}
+
+/* Footer */
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: #00b6ff;
+    float: right;
+    padding: 10px 0px;
+    text-align: center;
+    font-weight: bold;
 }
 
 @media (max-width: 800px) {
