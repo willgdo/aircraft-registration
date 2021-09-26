@@ -237,7 +237,6 @@ footer span {
 
   header h1 {
     font-size: 1.5em;
-    margin-top: 50px;
   }
 
   main input {
@@ -256,12 +255,12 @@ footer span {
   }
 
   .tooltip {
-    margin: 10px;
+    display: none;
   }
 
   footer {
     width: 100%;
-    padding: 5px 0px;
+    padding: 1px 0px;
   }
 
   footer span {
