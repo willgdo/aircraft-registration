@@ -204,27 +204,6 @@ main p {
   color: rgb(255, 0, 0);
 }
 
-/* Footer */
-
-footer {
-  position: absolute;
-  width: 50%;
-  bottom: 0;
-  background: transparent;
-  padding: 10px 0px;
-  text-align: center;
-  font-weight: bold;
-  color: #00b6ff;
-  opacity: 0.5;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: serif;
-}
-
-footer span {
-  color: var(--secondary-color);
-}
-
 /* .modal {
   position: absolute;
   top: 0;
@@ -306,14 +285,5 @@ footer span {
 
   .tooltip {
     display: none;
-  }
-
-  footer {
-    width: 100%;
-    padding: 1px 0px;
-  }
-
-  footer span {
-    color: var(--primary-color);
   }
 }
