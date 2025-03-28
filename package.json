@@ -1,0 +1,13 @@
+{
+  "name": "aircraft-registration",
+  "version": "1.0.0",
+  "description": "https://aircraft-registration.surge.sh/",
+  "main": "server/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server/server.js"
+  },
+  "keywords": [],
+  "author": "Willian Oliveira",
+  "license": "ISC"
+}
